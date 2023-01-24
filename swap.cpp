@@ -1,26 +1,15 @@
 #include<stdio.h>
 int main()
 {
-	int n;
-	printf("Enter the size of array: ");
-	scanf("%d",&n);
-	int a[n],i;
-	for(i=0;i<n;i++)
-	{
-		scanf("%d",&a[i]);
-	}
-	int max=a[0],min=a[0],k,l;
-	for(i=0;i<n;i++)
-	{
-		if(a[i]>max)
-		k=i;
-		if(a[i]<min)
-		l=i;
-	}
-	int t;
-	t=a[k];
-	a[k]=a[l];
-	a[l]=t;
-	for(i=0;i<n;i++)
-	printf("%d ",a[i]);
+	int a,b;
+	printf("Enter the value of a: ");
+	scanf("%d",&a);
+	printf("Enter the value of b: ");
+	scanf("%d",&b);
+	a = a^b;
+	b = a^b;
+	a = a^b;
+	printf("The value of a is: %d\n",a);
+	printf("The value of b is: %d\n",b);
+	return 0;
 }
